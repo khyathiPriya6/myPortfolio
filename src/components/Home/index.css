@@ -3,20 +3,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(14, 22, 16, 0.95) 0%, rgba(16, 26, 19, 0.95) 100%);
+  background: #2e3832;
   padding: 0 20px;
 }
 
 .home-content {
   max-width: 800px;
   text-align: center;
-  color: #ffffff;
+  color: #e0e0d8;
 }
 
 .greeting {
   font-size: 2rem;
   font-weight: 500;
+  margin-top: 4rem;
   margin-bottom: 0.5rem;
+  color: #ccd5ae;
+  position: relative;
   opacity: 0.9;
 }
 
@@ -24,25 +27,22 @@
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  background: linear-gradient(45deg, #00ff95, #00d9ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0 0 20px rgba(0, 255, 149, 0.3);
+  color: #fefae0;
+  text-shadow: 0 0 20px rgba(163, 177, 138, 0.3);
 }
 
 .title {
   font-size: 1.8rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
-  color: #00ff95;
+  color: #a3b18a;
 }
 
 .description {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 2rem;
-  opacity: 0.9;
+  color: #e0e0d8;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -65,23 +65,23 @@
 }
 
 .cta-button.primary {
-  background: #00ff95;
-  color: #0e1610;
+  background: #a3b18a;
+  color: #2e3832;
 }
 
 .cta-button.primary:hover {
-  background: #00d980;
+  background: #ccd5ae;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 255, 149, 0.3);
+  box-shadow: 0 5px 15px rgba(163, 177, 138, 0.3);
 }
 
 .cta-button.secondary {
-  border: 2px solid #00ff95;
-  color: #00ff95;
+  border: 2px solid #a3b18a;
+  color: #a3b18a;
 }
 
 .cta-button.secondary:hover {
-  background: rgba(0, 255, 149, 0.1);
+  background: rgba(163, 177, 138, 0.1);
   transform: translateY(-2px);
 }
 
@@ -93,25 +93,23 @@
 }
 
 .social-link {
-  color: #ffffff;
+  color: #e0e0d8;
   text-decoration: none;
   font-size: 1.1rem;
-  opacity: 0.8;
   transition: all 0.3s ease;
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: #3f4a3c;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .social-link:hover {
-  color: #00ff95;
-  opacity: 1;
+  color: #ccd5ae;
   transform: translateY(-3px);
-  background: rgba(0, 255, 149, 0.1);
+  background: #3f4a3c;
 }
 
 .social-icon {

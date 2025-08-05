@@ -8,10 +8,11 @@ const Home = () => {
       <div className="home-content">
         <h1 className="greeting">Hello, I'm</h1>
         <h2 className="name">Khyathi Priya</h2>
-        <h3 className="title">Software Engineer</h3>
+        <h3 className="title">Software Engineer | Tech Enthusiast</h3>
         <p className="description">
-          Passionate about creating innovative solutions and building impactful applications.
-          Specialized in full-stack development with expertise in modern technologies.
+          Curious about tech that improves everyday lives. A software engineer at Visa, 
+          passionate about building meaningful tech. I'm a lifelong learner who loves clean code, 
+          simple UIs, and exploring new ideas.
         </p>
         <div className="cta-buttons">
           <a href="#contact" className="cta-button primary">Get In Touch</a>

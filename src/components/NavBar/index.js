@@ -1,39 +1,65 @@
 import React from 'react';
 import './index.css';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
+  const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -80; // Adjust this value based on your navbar height
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
+        <HashLink 
+          smooth 
+          to="#home" 
+          scroll={scrollWithOffset}
+          className="navbar-logo"
+        >
           KP
-        </Link>
+        </HashLink>
         <ul className="nav-menu">
           <li className="nav-item">
-            <Link to="/" className="nav-links">
+            <HashLink 
+              smooth 
+              to="#home"
+              scroll={scrollWithOffset}
+              className="nav-links"
+            >
               Home
-            </Link>
+            </HashLink>
           </li>
           <li className="nav-item">
-            <Link to="/about" className="nav-links">
+            <HashLink 
+              smooth 
+              to="#about"
+              scroll={scrollWithOffset}
+              className="nav-links"
+            >
               About
-            </Link>
+            </HashLink>
           </li>
           <li className="nav-item">
-            <Link to="/experience" className="nav-links">
+            <HashLink 
+              smooth 
+              to="#experience"
+              scroll={scrollWithOffset}
+              className="nav-links"
+            >
               Experience
-            </Link>
+            </HashLink>
           </li>
           <li className="nav-item">
-            <Link to="/projects" className="nav-links">
+            <HashLink 
+              smooth 
+              to="#projects"
+              scroll={scrollWithOffset}
+              className="nav-links"
+            >
               Projects
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/contact" className="nav-links">
-              Contact
-            </Link>
+            </HashLink>
           </li>
         </ul>
       </div>
