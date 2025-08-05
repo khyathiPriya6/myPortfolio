@@ -1,0 +1,143 @@
+.home-container {
+  min-height: calc(100vh - 80px); /* Subtracting navbar height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(14, 22, 16, 0.95) 0%, rgba(16, 26, 19, 0.95) 100%);
+  padding: 0 20px;
+}
+
+.home-content {
+  max-width: 800px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.greeting {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.name {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #00ff95, #00d9ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px rgba(0, 255, 149, 0.3);
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #00ff95;
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+  background: #00ff95;
+  color: #0e1610;
+}
+
+.cta-button.primary:hover {
+  background: #00d980;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 255, 149, 0.3);
+}
+
+.cta-button.secondary {
+  border: 2px solid #00ff95;
+  color: #00ff95;
+}
+
+.cta-button.secondary:hover {
+  background: rgba(0, 255, 149, 0.1);
+  transform: translateY(-2px);
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.social-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link:hover {
+  color: #00ff95;
+  opacity: 1;
+  transform: translateY(-3px);
+  background: rgba(0, 255, 149, 0.1);
+}
+
+.social-icon {
+  font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .name {
+    font-size: 3rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-button {
+    width: 200px;
+  }
+}
