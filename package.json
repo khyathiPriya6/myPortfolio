@@ -48,5 +48,6 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.65.1"
-  }
+  },
+  "homepage": "https://khyathipriya6.github.io/myPortfolio"
 }
