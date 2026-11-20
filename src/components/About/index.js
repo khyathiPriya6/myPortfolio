@@ -9,11 +9,6 @@ const About = () => {
     tools: ['Git', 'MongoDB', 'Figma', 'Postman']
   };
 
-  const interests = {
-    current: ['Artificial Intelligence', 'Machine Learning', 'LLMs & Prompt Design'],
-    hobbies: ['Classical dance', 'Journaling & Notion', 'Music']
-  };
-
   return (
     <div id="about" className="about-container">
       <div className="about-content">

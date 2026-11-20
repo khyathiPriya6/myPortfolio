@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders the portfolio introduction and project navigation', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: 'Khyathi Priya' })).toBeInTheDocument();
+  expect(screen.getByRole('link', { name: 'View My Work' })).toHaveAttribute('href', '#projects');
 });
