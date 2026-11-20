@@ -1,70 +1,16 @@
-import React from 'react';
+import { useState } from 'react';
 import './index.css';
-import { HashLink } from 'react-router-hash-link';
-
-const Navbar = () => {
-  const scrollWithOffset = (el) => {
-    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -80; // Adjust this value based on your navbar height
-    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
-  };
-
-  return (
-    <nav className="navbar">
-      <div className="navbar-container">
-        <HashLink 
-          smooth 
-          to="#home" 
-          scroll={scrollWithOffset}
-          className="navbar-logo"
-        >
-          KP
-        </HashLink>
-        <ul className="nav-menu">
-          <li className="nav-item">
-            <HashLink 
-              smooth 
-              to="#home"
-              scroll={scrollWithOffset}
-              className="nav-links"
-            >
-              Home
-            </HashLink>
-          </li>
-          <li className="nav-item">
-            <HashLink 
-              smooth 
-              to="#about"
-              scroll={scrollWithOffset}
-              className="nav-links"
-            >
-              About
-            </HashLink>
-          </li>
-          <li className="nav-item">
-            <HashLink 
-              smooth 
-              to="#experience"
-              scroll={scrollWithOffset}
-              className="nav-links"
-            >
-              Experience
-            </HashLink>
-          </li>
-          <li className="nav-item">
-            <HashLink 
-              smooth 
-              to="#projects"
-              scroll={scrollWithOffset}
-              className="nav-links"
-            >
-              Projects
-            </HashLink>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  );
-};
-
-export default Navbar;
+const links = [['about', 'About'], ['skills', 'Skills'], ['experience', 'Experience'], ['practice', 'Practice'], ['projects', 'Projects']];
+export default function Navbar() {
+  const [expanded, setExpanded] = useState(false);
+  return <nav className="navbar" aria-label="Main navigation">
+    <div className="navbar-container">
+      <a href="#home" className="navbar-logo" aria-label="Khyathi Priya — home" onClick={() => setExpanded(false)}>kp<span>.</span></a>
+      <button className="menu-toggle" aria-expanded={expanded} aria-controls="nav-menu" onClick={() => setExpanded(!expanded)} onKeyDown={e => { if (e.key === 'Escape') setExpanded(false); }}>Menu <span aria-hidden="true">{expanded ? '−' : '+'}</span></button>
+      <ul id="nav-menu" className={`nav-menu ${expanded ? 'is-open' : ''}`} onKeyDown={e => { if (e.key === 'Escape') { setExpanded(false); e.currentTarget.previousElementSibling.focus(); } }}>
+        {links.map(([id, label]) => <li key={id}><a href={`#${id}`} onClick={() => setExpanded(false)}>{label}</a></li>)}
+        <li><a href="#contact" className="nav-contact" onClick={() => setExpanded(false)}>Let’s connect</a></li>
+      </ul>
+    </div>
+  </nav>;
+}

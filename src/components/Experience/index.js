@@ -40,14 +40,14 @@ const Experience = () => {
   ];
 
   return (
-    <div id="experience" className="experience-container">
+    <section id="experience" className="experience-container section" aria-labelledby="experience-heading">
       <div className="experience-content">
-        <h2 className="experience-title">Experience</h2>
+        <div className="section-heading"><p className="eyebrow">The journey so far</p><h2 id="experience-heading">Experience.</h2><p>Learning, contributing, and building with teams.</p></div>
         <div className="timeline">
           {experiences.map((exp, index) => (
             <div key={index} className="timeline-item">
               <div className="timeline-marker">
-                <FaMapMarkerAlt className="marker-icon" />
+                <FaMapMarkerAlt className="marker-icon" aria-hidden="true" />
               </div>
               <div className="timeline-content">
                 <div className="timeline-period">{exp.period}</div>
@@ -62,7 +62,7 @@ const Experience = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
