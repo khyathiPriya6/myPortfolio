@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './components/NavBar';
 import Home from './components/Home';
+import ChaosTriangle from './components/ChaosTriangle';
 import About from './components/About';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Experience from './components/Experience';
@@ -16,13 +17,14 @@ function App() {
           <Route path="/" element={
             <>
               <Home />
+              <ChaosTriangle />
               <About />
               <Experience />
               <Projects />
               <Footer />
             </>
           } />
-          <Route path="/home" element={<Navigate to="/" replace />} />
+          <Route path="/home" element={<Navigate to="/#home" replace />} />
           <Route path="/about" element={<Navigate to="/#about" replace />} />
           <Route path="/experience" element={<Navigate to="/#experience" replace />} />
           <Route path="/projects" element={<Navigate to="/#projects" replace />} />
