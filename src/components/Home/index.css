@@ -139,3 +139,22 @@
     width: 200px;
   }
 }
+
+
+/* Hero spacing keeps the animated experiment visible soon after arrival. */
+.home-container {
+  min-height: min(76vh, 690px);
+  padding: 3.5rem 24px 2.5rem;
+  scroll-margin-top: 80px;
+}
+.home-content {max-width: 880px;}
+.greeting {margin-top: 0;}
+.name {font-size: clamp(3.4rem, 7vw, 5.8rem);line-height: 1.12;}
+.title {font-size: clamp(1.4rem, 3vw, 2.2rem);}
+.description {max-width: 720px;}
+.cta-button {display: inline-flex;align-items:center;justify-content:center;}
+@media (max-width: 768px) {
+  .home-container {min-height: 70vh;padding: 3rem 20px;}
+  .name {font-size: clamp(2.8rem, 12vw, 4rem);}
+  .cta-button {width: auto;min-width: 220px;}
+}
