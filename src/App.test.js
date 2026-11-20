@@ -1,8 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+jest.mock('./components/ChaosTriangle', () => function MockChaosTriangle() {
+  return <section aria-label="Chaos Triangle interactive experiment">Chaos experiment ready</section>;
+});
+
+test('renders the refreshed homepage and interactive artwork section', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /Khyathi Priya/i })).toBeInTheDocument();
+  expect(screen.getByRole('region', { name: /Chaos Triangle interactive experiment/i })).toBeInTheDocument();
 });
