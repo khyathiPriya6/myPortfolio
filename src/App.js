@@ -32,5 +32,5 @@ function Portfolio() {
   return <><a className="skip-link" href="#main">Skip to content</a><Navbar /><main id="main" tabIndex={-1} ref={mainRef}><Home />{[About, Skills, Experience, EngineeringPractice, Projects].map(Component => <div className="reveal" key={Component.name}><Component /></div>)}</main><Footer /></>;
 }
 export default function App() {
-  return <Router><Routes><Route path="/" element={<Portfolio />} />{['home', 'about', 'skills', 'experience', 'practice', 'projects', 'contact'].map(section => <Route key={section} path={`/${section}`} element={<Navigate to={`/#${section}`} replace />} />)}<Route path="*" element={<Navigate to="/" replace />} /></Routes></Router>;
+  return <Router basename={process.env.PUBLIC_URL || '/'}><Routes><Route path="/" element={<Portfolio />} />{['home', 'about', 'skills', 'experience', 'practice', 'projects', 'contact'].map(section => <Route key={section} path={`/${section}`} element={<Navigate to={`/#${section}`} replace />} />)}<Route path="*" element={<Navigate to="/" replace />} /></Routes></Router>;
 }
